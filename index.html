@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>アプリ作成</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--ヘッダー>
+<head>
+  <meta charset="utf-8">
+  <title>Progate</title>
+  <!-- ここでFont Awesomeを読み込んでください -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <!-- ここにコードを書いていきましょう -->
+  <header>
+    <div class="container">
+      <div class="header-left">
+       <img class="logo" src="https://i.gyazo.com/a0ca7be67cfb4ac2b931ae3be3cd51f6.jpg">
+      </div>
+      <div class="header-right">
+        <a href="#" class="login">お問い合わせ</a>
+      </div>
+    </div>
+  </header>
+  <div class="top-wrapper">
+      <div class="container">
+       <h1>一生涯のパートナー<br>「ともに描く、あたらしい明日」</h1>
+       <p>果てしなく進む未来と果てしなく進歩する技術。<br>幾度となく交わるその交差点に第一生命テクノクロスはいます。<br>次の交差点はどんな景色が見えるだろう。さぁ、ともに未知なる道の第一歩を。</p>
+     
+       
+       <h4>ソリューション</h4>
+ <div class="c">
+   <a href="#" class="name">コンサルティング</a>
+      
+       <h2>
+         第一生命のシステムの企画・開発・保守・運用で培ったスキルとお客さまの立場に立った<br>長年の経験を生かして、お客さまの環境にあわせた仕組みづくりや<br>品質向上の具体的な業務支援など、幅広く対応します。
+       </h2>
+        <div class="btn-wrapper">
+       <a href="#" class ="btn signup">詳しくはこちら</a>
+           </div>
+        </div>
+   <div class="s">
+     <a href="#" class="name">システムインテグレーション</a>
+     <h2>COBOL、JAVAをはじめとした開発の受託など、<br>生命保険での開発を生かした様々なインテグレーションを提供します。</h2>
+     <div class="btn-wrapper">
+       <a href="#" class ="btn facebook"><span class="fa-solid fa-calendar-days"></span>開発実績</a>
+        </div>
+     <div class="d">
+       <a href="#" class="name">DX関連セミナー</a>
+       
+       <h2>第一生命グループにて実績のあるセミナーを貴社のニーズに合わせて提供します。</h2>
+         <div class="btn-wrapper">
+       <a href="#" class ="btn twitter"><span class="fa fa-twitter"></span>その他セミナー</a>
+    
+       </div>
+       
+     
+    </div>
+    </div>
+
+<!-- Vueで指定された"app"要素、この中でのみVueが有効 -->
+<div id="app">
+  <v-app>
+    <v-content>
+      <v-container>
+        <v-row
+          class="text-h3 mb-3 mt-3"
+          justify="center"
+          >
+          フリー入力スペース
+        </v-row>
+        <v-row
+          class="mb-3 mt-3"
+          align="center"
+          justify="center"
+          >
+          <v-col 
+            cols="6"            
+            >
+            <v-text-field
+                  class="ml-6 mr-6"
+                  v-model:value="task"                         
+                  label="タスクを入力"
+                  placeholder="タスクを入力…"
+                  outlined
+            >
+          </v-col>
+        </v-row>
+        <v-row
+          class="mb-3 mt-3"
+          align="center"
+          justify="center"
+          >
+          タスク内容：{{ task }}
+          <v-btn v-on:click="addTask"
+                 outlined
+      color="teal"
+               fab
+               dark
+               small               
+               >
+                 <v-icon dark>
+                   mdi-plus
+                 </v-icon>
+               </v-btn>
+        </v-row>
+        <v-row
+          class="mb-3 mt-3"
+          justify="center"
+          > 
+          <v-btn v-on:click="clearAll"
+                 
+                 rounded
+                 >全てのToDoをクリア</v-btn>
+        </v-row>
+        <v-row 
+          class="mb-3 mt-3"
+          justify="center"
+          v-for="todo in todoList">
+          {{ todo }}
+        </v-row>
+       
+           
+
+       
+        
+      </v-container>
+    </v-content>
+  </v-app>
+</div>
+  
+   <footer>
+      <!-- ここにコードを書いていきましょう -->
+      <div class="container">
+        <p>Learn to Code, Learn to be Creative.</p>
+      </div>
+    </footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
